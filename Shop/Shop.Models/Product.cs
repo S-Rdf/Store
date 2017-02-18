@@ -67,7 +67,7 @@ namespace Shop.Models
         //public Buyer[] Buyer { get { } set {LastEditDate = DateTime.Now;} }
 
 
-        int _codeNO;
+        private int _codeNO;
         public int CodeNO
         {
             get
@@ -79,7 +79,7 @@ namespace Shop.Models
         }
 
 
-        int _count;
+        private int _count;
         public int Count
         {
             get
@@ -91,7 +91,7 @@ namespace Shop.Models
             }
         }
 
-        string _completeExplain;
+        private string _completeExplain;
         public string CompleteExplain
         {
             get
@@ -103,7 +103,7 @@ namespace Shop.Models
             }
         }
 
-        string _englishName;
+        private string _englishName;
         public string EnglishName
         {
             get
@@ -119,7 +119,7 @@ namespace Shop.Models
         public bool IsThere { get; }
 
 
-        DateTime _lastEditDate;
+        private DateTime _lastEditDate;
         public DateTime LastEditDate
         {
             get
@@ -131,7 +131,7 @@ namespace Shop.Models
             }
         }
 
-        DateTime _productDateTime;
+        private DateTime _productDateTime;
         public DateTime ProductDateTime
         {
             get
@@ -143,7 +143,7 @@ namespace Shop.Models
             }
         }
 
-        long _price;
+        private long _price;
         private long Price
         {
             get
@@ -155,7 +155,7 @@ namespace Shop.Models
             }
         }
 
-        string _persianName;
+        private string _persianName;
         public string PersianName
         {
             get
@@ -167,8 +167,8 @@ namespace Shop.Models
             }
         }
 
-        string _producer;
-        public string Producer
+        private string _producer; 
+         public string Producer
         {
             get
             { return _producer; }
@@ -179,7 +179,7 @@ namespace Shop.Models
             }
         }
 
-        string _shortExplain;
+        private string _shortExplain;
         public string ShortExplain
         {
             get
@@ -191,7 +191,7 @@ namespace Shop.Models
             }
         }
 
-        DateTime _produceDateTime;
+        private DateTime _produceDateTime;
         public DateTime ProduceDateTime
         {
             get

@@ -32,8 +32,9 @@ namespace Shop.Models
 
             };
             Products_Count++;
-            return Products_Array;
-            
+            return Products_Array;            
         }
+
+        //public
     }
 }
