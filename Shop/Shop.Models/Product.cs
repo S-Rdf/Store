@@ -6,7 +6,7 @@ namespace Shop.Models
     public class Product
     {
 
-//-------------------------------------Constructors
+        //-------------------------------------Constructors
         public Product(string _englishName, string _persianName, int _count, long _price)
         {
             this.EnglishName = _englishName;
@@ -14,43 +14,206 @@ namespace Shop.Models
             //this.ProduceDateTime = _produceDateTime;            
             this.Count = _count;
             this.Price = _price;
-            
+
+            _count = -1;
+            _codeNO = -1;
+            _completeExplain = "";
+            _englishName = "";
+            IsThere = false;
+            _lastEditDate = DateTime.Now;
+            _productDateTime = DateTime.Now;
+            _price = -1;
+            _persianName = "";
+            _producer = "";
+            _shortExplain = "";
+
         }
 
         public Product(string _englishName, string _persianName)
         {
             this.EnglishName = _englishName;
             this.PersianName = _persianName;
-            this.Count = 0;
+
+            _count = -1;
+            _codeNO = -1;
+            _completeExplain = "";
+            _englishName = "";
+            IsThere = false;
+            _lastEditDate = DateTime.Now;
+            _productDateTime = DateTime.Now;
+            _price = -1;
+            _persianName = "";
+            _producer = "";
+            _shortExplain = "";
         }
 
-//-------------------------------------Properties
+        public Product()
+        {
+            _count = -1;
+            _codeNO = -1;
+            _completeExplain = "";
+            _englishName = "";
+            IsThere = false;
+            _lastEditDate = DateTime.Now;
+            _productDateTime = DateTime.Now;
+            _price = -1;
+            _persianName = "";
+            _producer = "";
+            _shortExplain = "";
+        }
 
-        public Buyer[] Buyer { get; set; }
+        //-------------------------------------Properties
 
-        public int CodeNO { get; set; }
+        //public Buyer[] Buyer { get { } set {LastEditDate = DateTime.Now;} }
 
-        public int Count { get; set; }
-        //public int Count { get; private set; }
 
-        public string CompleteExplain { get; set; }
+        int _codeNO;
+        public int CodeNO
+        {
+            get
+            { return _codeNO; }
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _codeNO = value;
+            }
+        }
 
-        public string EnglishName { get; set; }
+
+        int _count;
+        public int Count
+        {
+            get
+            { return _count; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _count = value;
+            }
+        }
+
+        string _completeExplain;
+        public string CompleteExplain
+        {
+            get
+            { return _completeExplain; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _completeExplain = value;
+            }
+        }
+
+        string _englishName;
+        public string EnglishName
+        {
+            get
+            { return _englishName; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _englishName = value;
+            }
+        }
+
 
         public bool IsThere { get; }
 
-        public DateTime LastEditDate { get; set; }
 
-        public DateTime ProduceDateTime { get; set; }
+        DateTime _lastEditDate;
+        public DateTime LastEditDate
+        {
+            get
+            { return _lastEditDate; }
 
-        private long Price { get; set; }        
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _lastEditDate = value;
+            }
+        }
 
-        public string PersianName { get; set; }               
+        DateTime _productDateTime;
+        public DateTime ProductDateTime
+        {
+            get
+            { return _productDateTime; }
 
-        public string Producer { get; set; }
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _productDateTime = value;
+            }
+        }
 
-        public string ShortExplain { get; set; }
-        
+        long _price;
+        private long Price
+        {
+            get
+            { return _price; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _price = value;
+            }
+        }
+
+        string _persianName;
+        public string PersianName
+        {
+            get
+            { return _persianName; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _persianName = value;
+            }
+        }
+
+        string _producer;
+        public string Producer
+        {
+            get
+            { return _producer; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _producer = value;
+            }
+        }
+
+        string _shortExplain;
+        public string ShortExplain
+        {
+            get
+            { return _shortExplain; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _shortExplain = value;
+            }
+        }
+
+        DateTime _produceDateTime;
+        public DateTime ProduceDateTime
+        {
+            get
+            { return _produceDateTime; }
+
+            set
+            {
+                LastEditDate = DateTime.Now;
+                _produceDateTime = value;
+            }
+        }
+
 
         //-------------------------------------METHODS
 
@@ -61,7 +224,7 @@ namespace Shop.Models
 
         public void ChangePrice(long newPrice)
         {
-            Price = newPrice;         
+            Price = newPrice;
         }
 
         ~Product() { }
