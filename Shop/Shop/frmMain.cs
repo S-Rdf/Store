@@ -15,7 +15,9 @@ namespace Shop
         private void btnNewProduct_Click(object sender, EventArgs e)
         {
             Product product = new Product("first Prosuct" , "کالای اول");
-           // DateTime dt = DateTime.Now;
+            // DateTime dt = DateTime.Now;
+
+            "".ToString();
         }
     }
 }

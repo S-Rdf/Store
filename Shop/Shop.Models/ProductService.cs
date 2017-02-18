@@ -28,9 +28,10 @@ namespace Shop.Models
             Products_Array[Products_Count - 1] = new Product()
             {
                 EnglishName = newProduct.EnglishName,
-            PersianName = newProduct.PersianName
+                PersianName = newProduct.PersianName
 
-        };
+            };
+            Products_Count++;
             return Products_Array;
             
         }

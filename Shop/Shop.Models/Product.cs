@@ -37,12 +37,12 @@ namespace Shop.Models
             _count = -1;
             _codeNO = -1;
             _completeExplain = "";
-            _englishName = "";
+            //_englishName = "";
             IsThere = false;
             _lastEditDate = DateTime.Now;
             _productDateTime = DateTime.Now;
             _price = -1;
-            _persianName = "";
+            //_persianName = "";
             _producer = "";
             _shortExplain = "";
         }
@@ -74,7 +74,6 @@ namespace Shop.Models
             { return _codeNO; }
             set
             {
-                LastEditDate = DateTime.Now;
                 _codeNO = value;
             }
         }
@@ -88,7 +87,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _count = value;
             }
         }
@@ -101,7 +99,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _completeExplain = value;
             }
         }
@@ -113,8 +110,7 @@ namespace Shop.Models
             { return _englishName; }
 
             set
-            {
-                LastEditDate = DateTime.Now;
+            {                
                 _englishName = value;
             }
         }
@@ -130,8 +126,7 @@ namespace Shop.Models
             { return _lastEditDate; }
 
             set
-            {
-                LastEditDate = DateTime.Now;
+            {               
                 _lastEditDate = value;
             }
         }
@@ -144,7 +139,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _productDateTime = value;
             }
         }
@@ -157,7 +151,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _price = value;
             }
         }
@@ -170,7 +163,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _persianName = value;
             }
         }
@@ -183,7 +175,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _producer = value;
             }
         }
@@ -196,7 +187,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _shortExplain = value;
             }
         }
@@ -209,7 +199,6 @@ namespace Shop.Models
 
             set
             {
-                LastEditDate = DateTime.Now;
                 _produceDateTime = value;
             }
         }
