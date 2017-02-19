@@ -18,7 +18,7 @@ namespace Shop.Service
         }
 
         //-------------------------------------Properties       
-        private static Product[] Products_Array { get; set; }
+        public static Product[] Products_Array { get; set; }
         public static int Products_Count { get; set; }
 
 
@@ -29,10 +29,31 @@ namespace Shop.Service
             Products_Array[Products_Count++] = newProduct;
         }
 
- /*       public Product[] DeleteProduct(int codeNo)
+  /*      public static Product[] DeleteProduct(int codeNo)
         {
-            return null;
+            for (int i = 0; i < Products_Count; i++)
+            {
+
+            }
+                return null;
         }
-        */
-    }
+    */    
+
+        public static Product ExpensiveProduct (Product[] productsArray)
+        {            
+            int i;
+            int expensiveIndex = 0;
+            long expensivePrice = -1;
+
+            for (i=0; i< Products_Count; i++)
+            {
+                if (productsArray[i].Price >= expensivePrice )
+                {
+                    expensivePrice = productsArray[i].Price;
+                    expensiveIndex = i;
+                }
+            }
+            return productsArray[i];
+        }
+            }
 }

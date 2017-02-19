@@ -7,47 +7,43 @@ namespace Shop.Service
     {
 
         //-------------------------------------Constructors
-        public Product(string _englishName, string _persianName, int _count, long _price)
+        public Product(string englishName, string persianName, int count, long price)
         {
-            this.EnglishName = _englishName;
-            this.PersianName = _persianName;
+            this.EnglishName = englishName;
+            this.PersianName = persianName;
             //this.ProduceDateTime = _produceDateTime;            
-            this.Count = _count;
-            this.Price = _price;
+            this.Count = count;
+            this.Price = price;
 
             _count = -1;
             _codeNO = -1;
-            _completeExplain = "";
-            _englishName = "";
+            _completeExplain = "";            
             IsThere = false;
             _lastEditDate = DateTime.Now;
             _productDateTime = DateTime.Now;
             _price = -1;
-            _persianName = "";
             _producer = "";
             _shortExplain = "";
 
         }
 
-        public Product(string _englishName, string _persianName)
+        public Product(string englishName, string persianName)
         {
-            this.EnglishName = _englishName;
-            this.PersianName = _persianName;
+            this.EnglishName = englishName;
+            this.PersianName = persianName;
 
             _count = -1;
             _codeNO = -1;
-            _completeExplain = "";
-            //_englishName = "";
+            _completeExplain = "";            
             IsThere = false;
             _lastEditDate = DateTime.Now;
             _productDateTime = DateTime.Now;
             _price = -1;
-            //_persianName = "";
             _producer = "";
             _shortExplain = "";
         }
 
-        public Product()
+  /*      public Product()
         {
             _count = -1;
             _codeNO = -1;
@@ -61,7 +57,7 @@ namespace Shop.Service
             _producer = "";
             _shortExplain = "";
         }
-
+*/
         //-------------------------------------Properties
 
         //public Buyer[] Buyer { get { } set {LastEditDate = DateTime.Now;} }
@@ -144,7 +140,7 @@ namespace Shop.Service
         }
 
         private long _price;
-        private long Price
+        public long Price
         {
             get
             { return _price; }

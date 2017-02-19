@@ -30,13 +30,14 @@
         {
             this.btnNewProduct = new System.Windows.Forms.Button();
             this.btnAddToList = new System.Windows.Forms.Button();
+            this.btnExpensiveProduct = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnNewProduct
             // 
             this.btnNewProduct.Location = new System.Drawing.Point(26, 54);
             this.btnNewProduct.Name = "btnNewProduct";
-            this.btnNewProduct.Size = new System.Drawing.Size(87, 23);
+            this.btnNewProduct.Size = new System.Drawing.Size(131, 23);
             this.btnNewProduct.TabIndex = 0;
             this.btnNewProduct.Text = "New Product";
             this.btnNewProduct.UseVisualStyleBackColor = true;
@@ -46,17 +47,28 @@
             // 
             this.btnAddToList.Location = new System.Drawing.Point(26, 97);
             this.btnAddToList.Name = "btnAddToList";
-            this.btnAddToList.Size = new System.Drawing.Size(87, 23);
+            this.btnAddToList.Size = new System.Drawing.Size(131, 23);
             this.btnAddToList.TabIndex = 1;
             this.btnAddToList.Text = "Add to List";
             this.btnAddToList.UseVisualStyleBackColor = true;
             this.btnAddToList.Click += new System.EventHandler(this.btnAddToList_Click);
+            // 
+            // btnExpensiveProduct
+            // 
+            this.btnExpensiveProduct.Location = new System.Drawing.Point(26, 136);
+            this.btnExpensiveProduct.Name = "btnExpensiveProduct";
+            this.btnExpensiveProduct.Size = new System.Drawing.Size(131, 23);
+            this.btnExpensiveProduct.TabIndex = 2;
+            this.btnExpensiveProduct.Text = "more Expensive Product";
+            this.btnExpensiveProduct.UseVisualStyleBackColor = true;
+            this.btnExpensiveProduct.Click += new System.EventHandler(this.btnExpensiveProduct_Click);
             // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Controls.Add(this.btnExpensiveProduct);
             this.Controls.Add(this.btnAddToList);
             this.Controls.Add(this.btnNewProduct);
             this.Name = "frmMain";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button btnNewProduct;
         private System.Windows.Forms.Button btnAddToList;
+        private System.Windows.Forms.Button btnExpensiveProduct;
     }
 }
