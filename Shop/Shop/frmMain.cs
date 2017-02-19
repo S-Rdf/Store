@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-using Shop.Models;
+using Shop.Service;
 
 
 namespace Shop
@@ -17,6 +17,13 @@ namespace Shop
             Product product = new Product("first Prosuct" , "کالای اول");           
 
             "".ToString();
+        }
+
+        private void btnAddToList_Click(object sender, EventArgs e)
+        {
+            var product = new Product();
+            ProductService.AddProduct(product);
+            MessageBox.Show(ProductService.Products_Count.ToString());
         }
     }
 }

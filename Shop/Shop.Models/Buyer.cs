@@ -1,6 +1,6 @@
 ﻿
 
-namespace Shop.Models
+namespace Shop.Service
 {
     public class Buyer
     {

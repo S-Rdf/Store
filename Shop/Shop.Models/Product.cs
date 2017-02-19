@@ -1,7 +1,7 @@
 ﻿using System;
 
 
-namespace Shop.Models
+namespace Shop.Service
 {
     public class Product
     {
