@@ -2,7 +2,6 @@
 using System.Windows.Forms;
 using Shop.Service;
 
-
 namespace Shop
 {
     public partial class frmMain : Form
@@ -25,14 +24,33 @@ namespace Shop
 
         private void btnAddToList_Click(object sender, EventArgs e)
         {
-            var product = new Product("first Product","کالای اول");
-            ProductService.AddProduct(product);
-            MessageBox.Show(ProductService.Products_Count.ToString());
+            var product1 = new Product("first Product","کالای دوم");
+            var product2 = new Product("first Product", "کالای دوم");
+            var product3 = new Product("first Product", "کالای دوم");
+
+            var productService = new ProductService();
+
+            productService.AddProduct(product1);
+            productService.AddProduct(product2);
+            productService.AddProduct(product3);
+
+
+            MessageBox.Show(productService.Products_Count.ToString());
+            
+            var poo = new Buyer();
+             
+          
         }
 
         private void btnExpensiveProduct_Click(object sender, EventArgs e)
         {
-            ProductService.ExpensiveProduct(ProductService.Products_Array);
+            var productService = new ProductService();
+            productService.ExpensiveProduct(productService.Products_Array);
         }
+
+        
+
+        
+        
     }
 }

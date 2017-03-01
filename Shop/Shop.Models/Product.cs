@@ -7,23 +7,21 @@ namespace Shop.Service
     {
 
         //-------------------------------------Constructors
-        public Product(string englishName, string persianName, int count, long price)
+        public Product(string englishName, string persianName, int count, long price): this(englishName, persianName)
         {
-            this.EnglishName = englishName;
-            this.PersianName = persianName;
-            //this.ProduceDateTime = _produceDateTime;            
+           // this.EnglishName = englishName;
+           // this.PersianName = persianName;                        
             this.Count = count;
             this.Price = price;
 
-            _count = -1;
-            _codeNO = -1;
-            _completeExplain = "";            
+           /* CodeNO = -1;
+            CompleteExplain = "";            
             IsThere = false;
-            _lastEditDate = DateTime.Now;
-            _productDateTime = DateTime.Now;
-            _price = -1;
-            _producer = "";
-            _shortExplain = "";
+            LastEditDate = DateTime.Now;
+            ProductDateTime = DateTime.Now;            
+            Producer = "";
+            ShortExplain = "";
+            */
 
         }
 
@@ -32,15 +30,15 @@ namespace Shop.Service
             this.EnglishName = englishName;
             this.PersianName = persianName;
 
-            _count = -1;
-            _codeNO = -1;
-            _completeExplain = "";            
+            Count = -1;
+            CodeNO = -1;
+            CompleteExplain = "";            
             IsThere = false;
-            _lastEditDate = DateTime.Now;
-            _productDateTime = DateTime.Now;
-            _price = -1;
-            _producer = "";
-            _shortExplain = "";
+            LastEditDate = DateTime.Now;
+            ProductDateTime = DateTime.Now;
+            Price = -1;
+            Producer = "";
+            ShortExplain = "";
         }
 
   /*      public Product()

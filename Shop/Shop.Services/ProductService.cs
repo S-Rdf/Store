@@ -7,29 +7,29 @@ using System.Threading.Tasks;
 
 namespace Shop.Service
 {
-    public static class ProductService
+    public class ProductService
     {
         //-------------------------------------Constructor
 
-        static ProductService()
+         public ProductService()
         {
             Products_Array = new Product[100];
             Products_Count = 0;
         }
 
         //-------------------------------------Properties       
-        public static Product[] Products_Array { get; set; }
-        public static int Products_Count { get; set; }
+        public  Product[] Products_Array { get; set; }
+        public int Products_Count { get; set; }
 
 
         //-------------------------------------Methods
 
-        public static void AddProduct(Product newProduct)
+        public  void AddProduct(Product newProduct)
         {
             Products_Array[Products_Count++] = newProduct;
         }
 
-  /*      public static Product[] DeleteProduct(int codeNo)
+  /*      public Product[] DeleteProduct(int codeNo)
         {
             for (int i = 0; i < Products_Count; i++)
             {
@@ -39,7 +39,7 @@ namespace Shop.Service
         }
     */    
 
-        public static Product ExpensiveProduct (Product[] productsArray)
+        public  Product ExpensiveProduct (Product[] productsArray)
         {            
             int i;
             int expensiveIndex = 0;
